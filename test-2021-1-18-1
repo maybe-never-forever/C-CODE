@@ -1,0 +1,73 @@
+#define _CRT_SECURE_NO_WARNINGS 1  
+#include<stdio.h>
+#include<string.h>
+
+
+//int main()
+//{
+//	printf("%d\n", sizeof(int*));//      4/8
+//	printf("%d\n", sizeof(short*));//    4/8
+//	printf("%d\n", sizeof(float*));//    4/8
+//	printf("%d\n", sizeof(double*));//   4/8
+//	//int a = 10;//向内存申请了四个字节的空间,这个地址经常会改变
+//	////printf("%p\n", &a);
+//	//int* p = &a;//"int*"表示p是一个指针变量,这里的"*"表示p是个指针变量
+//	////printf("%p\n", p);
+//	//*p = 20;//"*"解引用操作符,或者叫间接访问操作符
+//	//printf("a = %d\n", a);
+//	//double d = 3.14;
+//	//double* pd = &d;
+//	//*pd = 5.5;
+//	//printf("%lf\n", d);
+//	//printf("%lf\n", *pd);
+//	//printf("%d\n", sizeof pd);//32-4/64-8
+//	return 0;
+//}
+
+
+//结构体
+//char int double......
+//人=3.14？
+//'w'
+//书——复杂对象
+//表示人：名字+身高+年龄+身份证号码+.......
+//书：书名+出版社+定价+书号+.......
+//复杂对象——结构体—我们自己创造出来的一种类型
+//
+//struct Book
+//{
+//	char name[20];//C语言程序设计
+//	short price;//55
+//};//";"不可缺少，用于结束"struct"的类型定义
+////利用结构体类型，创建一个该类型的结构体变量
+//int main()
+//{
+//	struct Book b1 = { "C语言程序设计",55 };
+//	struct Book* pb = &b1;
+//	//b1.name = "C++";//"name"是数组名，本质上是一个地址，不可以直接修改
+//	strcpy(b1.name, "C++");//"strcpy"--string copy--字符串拷贝-库函数-头文件-string.h
+//	printf("%s\n", b1.name);
+//	b1.price = 15;//这里可以直接修改，因为"price"是变量，但是"name"不可以。
+//	//printf("%s\n", pb->name);//"->"  结构体指针找到结构体成员
+//	//printf("%d\n", pb->price);
+//	//利用pb打印出书名和价格
+//	//printf("%s\n", (*pb).name);
+//	//printf("%d\n", (*pb).price);
+//	//printf("书名：%s\n", b1.name);//利用"."来访问结构体变量的成员
+//	//printf("价格：%d元\n", b1.price);
+//	//b1.price = 15;
+//	//printf("会员价格：%d元\n", b1.price);
+//	return 0;
+//}
+
+
+//第二讲 分支和循环
+//语句
+int main()
+{
+	int a = 10;
+
+	return 0;
+}
+
+
