@@ -1,0 +1,102 @@
+
+//如果条件成立要执行多条语句的话，应该使用代码块
+//int main()
+//{
+//	int age = 10;
+//	printf("age =");
+//	scanf("%d", &age);
+//	if (age < 18)
+//	{
+//		printf("未成年\n");
+//		printf("还不能谈恋爱哦。");
+//	}
+//	else if (age >= 18 && age < 28)
+//	{
+//		printf("已成年\n");
+//		printf("正是谈恋爱的好时间哦");
+//	}
+//	else
+//		printf("好好享受你的家庭生活吧。");
+//	return 0;
+//}
+//
+//int main()
+//{
+//	int a = 0;
+//	int b = 2;
+//	if (a == 1)//只有在if(a ==1)时，才会执行下列的执行
+//	{
+//		if (b == 2)
+//			printf("hehe\n");
+//	}
+//	    else//"else"与离得最近的未匹配if进行匹配
+//	    printf("haha\n");
+//	return 0;
+//}
+
+//if语句书写形式
+//int main()
+//{
+//	int a = 0;
+//	scanf("%d", &a);
+//		if (a < 30)
+//		{
+//			printf("hehe\n");
+//		}
+//	return 0;
+//}
+//
+//int main()
+//{
+//	int a = 1;
+//	//if (a = 5)//此时代码意义为将5赋值给a，判断相等应该使用“==”
+//	if(5 == a)//好的代码习惯，常量判断相等时常量放在左边
+//	{
+//		printf("呵呵\n");
+//	}
+//	return 0;
+//}
+
+
+//我的代码——练习——取1-100之间的奇数
+//int main()
+//{
+//	int i = 0;
+//	while (i <= 100)
+//	{
+//		int a = i % 2;
+//		if (1 == a)
+//			printf("%d是奇数\n", i);
+//		i++;
+//	}
+//		return 0;
+//}
+
+//练习取1-100之间的奇数；教学代码
+//int main()
+//{
+//	int i = 1;
+//	while (i <= 100)
+//	{
+//		//if (i % 2 == 1)//or if(i%2 !==0)
+//		//	printf("%d\n", i);
+//		//i++;
+//		printf("%d\n", i);
+//		i += 2;
+//
+//	}
+//	return 0;
+//}
+//练习——判断一个输入数是否是奇数
+//int main()
+//{
+//	int a = 0;
+//	scanf("%d", &a);
+//	int b = a % 2;
+//	if (1 == b)
+//	{
+//		printf("%d是奇数\n", a);
+//	}
+//	else
+//		printf("%d不是奇数\n", a);
+//}
