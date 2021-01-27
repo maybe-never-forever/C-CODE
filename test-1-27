@@ -1,0 +1,83 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include<stdio.h>
+
+//int main()
+//{
+//	/*int ch = 0;*/
+//	//while ((ch = getchar()) != EOF)//EOF ——end of file——文件结束标志
+//	//{
+//	//	putchar(ch);
+//	//}
+//	int ch = 0;
+//	int ret = 0;
+//	char password[20] = {0};
+//	printf("请输入密码：");
+//	scanf("%s", password);//输入密码并存放在password数组中
+//	//缓冲区还剩余一个‘\n’
+//	//读取一个'\n',清空缓冲区
+//	while ((ch = getchar()) != '\n')//一直读取缓冲区直到将'\n'读取完为止；
+//	{
+//		;
+//	}
+//	printf("请确认(Y/N):>");
+//	ret = getchar();//Y/N
+//	if (ret == 'Y')
+//	{
+//		printf("确认成功\n");
+//	}
+//	else
+//	{
+//		printf("放弃确认\n");
+//	}
+//	//printf("%d\n", '\n');
+//	return 0;
+//}
+
+//int main()//代码的目的是输出‘0-9’的数字
+//{
+//	int ch = 0;
+//	while ((ch = getchar()) != EOF)
+//	{
+//		if (ch < '0' || ch>'9')
+//			continue;
+//		putchar(ch);
+//		putchar('\n');
+//	}
+//	return 0;
+//}
+
+//int main()
+//{
+//
+//	////使用while语句来输出1-10
+//	//int i = 1;//初始化
+//	//while (i <= 10)//判断
+//	//{
+//	//	if (i == 5)
+//	//		continue;//此时continue会跳过调整部分，会陷入死循环
+//	//	printf("%d\n",i);
+//	//	i++;//调整
+//	//}
+//
+//	//使用for循环来输出1-10
+//	for (int i = 1; i <= 10; i++)//将初始化、判断、调整整合到一起
+//	{
+//		if (5 == i)
+//			//break;
+//			continue;//break 和 continue在for语句中也可以使用，但是continue不会跳过调整部分
+//		printf("%d\n", i);
+//	}
+//	return 0;
+//}
+
+int main()
+{
+	int i = 0;
+	for (i = 0; i < 10; i++)
+	{
+		if (i == 5)//如果不是（i==5）;而是(i=5)赋值5的话，此地会产生死循环
+			printf("haha\n");
+		printf("hehe\n");
+	}
+	return 0;
+}
