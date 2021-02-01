@@ -1,0 +1,179 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+#include "add.h"
+#include<string.h>
+//int main()
+//{
+//	int a = 10;
+//	int b = 20;
+//	int sum = Add(a,b);
+//	printf("%d\n", sum);
+//	return 0;
+//
+//}
+
+////递归
+////最简单的递归
+//int main()
+//{
+//	printf("hehe\n");//递归打印hehe
+//	main();
+//	return 0;
+//}//会出现异常"stack overflow"
+////这是递归常见的错误，栈溢出
+
+//练习1 接收一个整型值（无符号），按照顺序打印它的每一位。
+//void print(int n)
+//{
+//	if (n > 9)//递归在书写时一定要注意书写其限制条件
+//	{
+//		print(n / 10);
+//	}
+//	printf("%d ", n % 10);
+//}
+//int main()
+//{
+//	unsigned int num = 0;
+//	scanf("%d", &num);//1234
+//	//递归解决
+//	print(num);
+//	//print(1234)
+//	//print(123)  4
+//	//print(12) 3 4
+//	//print(1) 2 3 4 
+//	return 0;
+//}
+
+//编写一个函数，求字符串长度，要求不创建临时变量
+//int my_strlen(char* str)
+//{
+//	//计算字符串的长度
+//	int count = 0;
+//	while (*str != '\0')
+//	{
+//		count++;
+//		str++;
+//	}
+//	return count;
+//}
+////使用递归的方法
+//my_strlen(char* str)
+//{
+//	if (*str != '\0')
+//		return 1 + my_strlen(str + 1);
+//	else
+//		return 0;
+//}
+////把大事化小
+////my_strlen("night study');
+////1+my_strlen("ight study");
+////2+my_strlen("ght study");
+////......
+////9+my_strlen("dy");
+////10+my_strlen("y");
+////11+my_strlen("")
+////11+0
+//int main()
+//{
+//	char arr[] = "night study";
+//	//int len = strlen(arr);//求字符串长度
+//	//printf("%d\n", len);
+//	//模拟实现了一个strlen函数
+//	int len = my_strlen(arr);//arr是数组，数组传参，传过去的是首元素的地址
+//	printf("%d\n", len);
+//	return 0;
+//}
+
+//练习——求n的阶乘
+//int Fac1(int n)//用循环的方式解决
+//{
+//	int i = 0;
+//	int ret = 1;
+//	for (i = 1; i <= n; i++)
+//	{
+//		ret *= i;
+//	}
+//	return ret;
+////}
+//int Fac2(int n)
+//{
+//	if (n >1)
+//		return n * Fac2(n - 1);
+//	else
+//		return 1;
+//}
+//int main()
+//{
+//	int n = 0;
+//	scanf("%d", &n);
+//	//int ret = Fac1(n);
+//	int ret = Fac2(n);
+//	printf("%d", ret);
+//	return 0;
+//}
+
+//练习——求第n个斐波那契数
+//斐波那契数列
+//1 1 2 3 5 8 13 21 34 55.....
+//描述第n个斐波那契数的时候
+
+//int count = 0;
+//int Fib(int n)
+//{
+//	//if (n == 3)//测试第3个斐波那契数的计算次数
+//		//count++;
+//	if (n <= 2)
+//		return 1;
+//	else
+//		return Fib(n - 2) + Fib(n - 1);
+//}
+////50
+////49  48
+////48  47 47 46
+//47 46 46 45 46 45 45 44  大量的重复
+//
+//int Fib(int n)
+//{
+//	int a = 1;
+//	int b = 1;
+//	int c = 1;
+//	while (n > 2)
+//	{
+//		c = a + b;
+//		a = b;
+//		b = c;
+//		n--;
+//	}
+//	return c;
+//}
+//int main()
+//{
+//	int n = 0;
+//	int ret = 0;
+//	scanf("%d", &n);
+//	//TDD - 测试驱动开发
+//	ret = Fib(n);
+//	printf("ret = %d\n", ret);
+//	//printf("count =%d\n", count);
+//	return 0;
+//}
+//
+
+//递归可以解决问题，循环也可以解决 使用哪种呢？
+//是否只有无限制条件的递归存在栈溢出的现象呢？其实不是
+//
+//void test(int n)
+//{
+//	if (n < 10000)
+//		test(n + 1);
+//}//有限制条件但是依然栈溢出
+//
+//int main()
+//{
+//	test(1);
+//	return 0;
+//}
+
+//经典问题——汉诺塔问题
+//广联达-
+//青蛙跳台阶问题——《剑指offer》
