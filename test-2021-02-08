@@ -1,0 +1,167 @@
+#define _CRT_SECURE_NO_WARINGS 1
+#include<stdio.h>
+//
+//int main()
+//{
+//	int a = 0;
+//	char b = 'w';
+//	int arr[10] = { 0 };
+//	printf("%d\n", sizeof(a));
+//	printf("%d\n", sizeof(int));
+//	printf("%d\n", sizeof(b));
+//	printf("%d\n", sizeof(char));
+//	printf("%d\n", sizeof(arr));
+//	printf("%d\n", sizeof(int[10]));
+//	return 0;
+//}
+//
+//int main()
+//{
+//	short s = 0;
+//	int a = 10;
+//	printf("%d\n", sizeof(s = a + 5));//sizeof 内部的表达式是不参与运算的，所以s=0，其次这个值的大小还是取决于s
+//	printf("%d\n", s);
+//	return 0;
+//}
+//
+//int main()
+//{
+//	int a = 11;
+//	a = a | (1 << 2);
+//	printf("%d\n", a);
+//	a = a & (~(1 << 2));
+//	printf("%d\n", a);
+//	//00000000000000000000000000001011
+//	//00000000000000000000000000000100 
+//	//1<<2;
+//	//00000000000000000000000000000001
+//	////~按二进制位取反
+//	////00000000000000000000000000000000
+//	////11111111111111111111111111111111-补码
+//	////11111111111111111111111111111110 -反码
+//	////10000000000000000000000000000001-原码
+//	//printf("%d\n", ~a);
+//	return 0;
+//}
+//
+//int main()
+//{
+//	int a = 10;
+//	printf("%d\n", ++a);//前置++，先++后使用
+//	printf("%d\n", a++);//后置++，先使用再++
+//	printf("%d\n", a);
+//	return 0;
+//}
+//
+//int main()
+//{
+//	int a = (int)3.14;//int a=int(3.14);//err
+//	return 0;
+//}
+//
+//void test1(int arr[])
+//{
+//	printf("%d\n", sizeof(arr));
+//}
+//void test2(char ch[])
+//{
+//	printf("%d\n", sizeof(ch));
+//}
+//int main()
+//{
+//	int arr[10] = { 0 };
+//	char ch[10] = { 0 };
+//	printf("%d\n", sizeof(arr));//40
+//	printf("%d\n", sizeof(ch));//10
+//	test1(arr);//4
+//	test2(ch);//4
+//	return 0;
+//}
+//
+//int main()
+//{
+//	int a = 3;//011
+//	int b = 5;//101
+//	int c = a && b;//
+//	int d = a || b;//111
+//	printf("%d %d",c,d);//输出0/1；只要结果不为假就输出1
+//}
+//
+//int main()
+//{
+//	int i = 0, a = 1, b = 2, c = 3, d = 4;
+//	/*i = a++ && ++b && d++;*/
+//	//&&这个操作符；只要左边的数值为0，后面不进行运算
+//	i=a++||++b||d++;//||这个操作符，只要左边为真，那么就直接输出1，右边不执行
+//	printf("a =%d\nb= %d\nc= %d\nd= %d\n", a, b, c, d);
+//	return 0;
+////}
+//
+//int main()
+//{
+//	int a = 10;
+//	int b = 20;
+//	int max = 0;
+//	if (a > b)
+//		max = a;
+//	else
+//		max = b;
+//	max = (a > b ? a : b);
+//	/*if (a > 5)
+//	{
+//		b = 3;
+//	}
+//	else
+//		b = -3;
+//	b=(a > 5 ? 3 : -3);*/
+//	return 0;
+//}
+//
+//int main()
+//{
+//	int a[10] = { 0 };
+//	a[4] = 10;//[ ]的操作数是arr和4
+//	1 + 2;
+//	return 0;
+//}
+//
+//int get_max(int a, int b)
+//{
+//	return a > b ? a : b;
+//}
+//int main()
+//{
+//	int a = 10;
+//	int b = 20;
+//	int max = get_max(a, b);
+//	printf("max= %d", max);
+//	return 0;
+//}
+
+//学生
+//int float
+//创建了一个结构体类型
+struct Stu
+{
+	//成员变量
+	char name[20];
+	int age;
+	char id[20];
+
+};
+int main()
+{
+	int a = 10;
+	//使用struct stu这个结构体类型创建了一个结构体变量，并且初始化
+	struct Stu s1 = {"张三",20,"202102082302"};
+	struct Stu* ps = &s1;
+	printf("%s\n", ps->name);
+	//结构体指针->成员名
+	//printf("%s\n", (*ps).name);
+	//printf("%s\n", (*ps).age);
+	//printf("%s\n", s1.name);//利用'.'操作符来访问结构体变量的成员
+	//printf("%d\n", s1.age);
+	//printf("%s\n", s1.id);
+	//结构体.成员名
+	return 0;
+}
