@@ -1,0 +1,140 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include<stdio.h>
+#include<stdlib.h>
+//
+//
+//int main()
+//{
+//	int i = 0;
+//	for (i = 0; i < 100; i++)
+//	{
+//		printf("%d\n", i);
+//	}
+//	system("pause");
+//	return 0;
+//}
+
+//F5 启动调试-和F9配合使用
+//int main()
+//{
+//	int i = 0;
+//	int arr[10] = { 1,2,3,4,5,6,7,8,9,10 };
+//	for (i = 0; i <= 12; i++)
+//	{
+//		printf("hehe\n");
+//		arr[i] = 0;
+//	}//debug版本死循环，release版本打印13个hehe
+//	system("pause");
+//	return 0;
+//}
+
+//F5 启动调试-和F9配合使用
+//int main()
+//{
+//	int i = 0;
+//	for (i = 0; i < 100; i++)
+//	{
+//		printf("%d\n", i);
+//	}
+//	for (i = 0; i < 100; i++)
+//	{
+//		printf("%d\n", 10 - i);//F5跳到执行逻辑的下一个断点
+//	}
+//	system("pause");
+//	return 0;
+//
+//
+//int Add(int x, int y)
+//{
+//	return x + y;
+//}
+//int main()
+//{
+//	printf("hehe\n");
+//	int a = 10;
+//	int b = 20;
+//	int c = Add(a, b);//F11,逐语句，可以进入到函数的内部，力度比F10要细
+//
+//	return 0;
+//}
+//
+//int main()
+//{
+//	{
+//		int tmp = 0;
+//		printf("tmp=%d\n", tmp);
+//	}
+//	int arr[10] = { 0 };
+//	int i = 0;
+//	for (i = 0; i < 10; i++)
+//	{
+//		arr[i] = i;
+//	}
+//	
+//	return 0;
+//}
+
+//void test2()
+//{
+//	printf("hehe\n");
+//}
+//void test1()
+//{
+//	test2();
+//}
+//void test()
+//{
+//	test1();
+//}
+//int main()
+//{
+//	test();
+//		return 0;
+//}
+
+////一些调试的实例
+////实例一 计算1!+2!+...+n！
+//int main()
+//{
+//	int i = 0;
+//	int sum = 0;
+//	int n = 0;
+//	int ret = 1;
+//	scanf("%d", &n);//3 1!+2!+3!=1+2+6=9
+//	for (i = 1; i <= n; i++)
+//	{
+//		int j = 0;
+//		int ret = 1;
+//		for (j = 1; j <= i; j++)
+//		{
+//			ret *= j;
+//		}
+//		sum += ret;
+//	}
+//	printf("%d\n", sum);
+//	return 0;
+//}
+
+
+int main()
+{
+	int i = 0;
+	int arr[10] = { 1,2,3,4,5,6,7,8,9,10 };
+	printf("%p\n", &i);
+	printf("%p\n", arr);
+	//VC6.0的环境下，<=10 就死循环了
+	//gcc编译器 <=11  死循环
+	//VS2013/2019 <=12 死循环
+	//for (i = 0; i <= 12; i++)//数组合适的往后越界是有可能改变i的——出处《C陷阱和缺陷》
+	//{
+	//	printf("hehe\n");
+	//	arr[i] = 0;
+	//}//debug版本死循环，release版本打印13个hehe
+	//1.栈区的默认使用：
+	//先使用高地址的空间
+	//再使用低地址的空间
+	//2.数组随着下标的增长
+	//地址是由低到高变化的
+	system("pause");
+	return 0;
+}
